@@ -5,7 +5,7 @@ text_input="modi is precident of india"
 def find_words(text_input):
     rake=Rake()
     keywords=rake.apply(text_input.lower())
-    print(keywords)
+    # print(keywords)
     return keywords
 keywords=find_words(text_input)
 def get_search_results(keywords):
@@ -13,9 +13,13 @@ def get_search_results(keywords):
     search_words=""
     for x in keywords:
         search_words=search_words+x[0]+" "
-    print(search_words)
+    # print(search_words)
     googlenews.search(search_words)
     result=googlenews.result()
-    print(result[0]['link'])
+    # print(result["link"])
+    return result
+    # print(result[0]['link'])
 
-get_search_results(keywords)
+r = get_search_results(keywords)
+for d in r:
+    print(d["link"])

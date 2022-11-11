@@ -1,1 +1,2 @@
-text_input=input('enter the news to search in ')
+for d in r:
+#     print(d["link"])
