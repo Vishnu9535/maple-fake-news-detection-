@@ -11,6 +11,7 @@ keywords=find_words(text_input)
 def get_search_results(keywords):
     googlenews=GoogleNews()
     googlenews.search(*(x[0] for x in keywords))
-    googlenews=
+    result=googlenews.result()
+    print(result)
 
 get_search_results(keywords)
