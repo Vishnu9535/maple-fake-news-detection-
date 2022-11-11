@@ -1,0 +1,1 @@
+text_input=input('enter the news to search in ')
