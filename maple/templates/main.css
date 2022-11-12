@@ -1,0 +1,20 @@
+/* @import url('https://fonts.googleapis.com/css?family=Paytone+One') */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: paytone one;
+}
+h1{
+    margin-top: 100px; 
+    text-align: center; 
+    font-size: 100px; 
+    font-family: paytone one;
+}
+.searchbar{
+    width: 550px;
+    margin-left: 380px;
+    border-radius: 15px;
+    background-color: black;
+}
