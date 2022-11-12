@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 
 from core import validate
 
-
 app = Flask(__name__)
 
 

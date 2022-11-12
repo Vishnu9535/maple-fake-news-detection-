@@ -1,0 +1,27 @@
+/* @import url('https://fonts.googleapis.com/css?family=Paytone+One') */
+
+div {
+    background-image: linear-gradient(red,yellow);
+}
+
+h1{
+    margin-top: 50px; 
+    margin-bottom: 30px;
+    padding: 0;
+    text-align: center; 
+    font-size: 100px; 
+    font-family: "paytone one";
+}
+input[type=url]{
+    width: 700px;
+    height: 30px;
+    margin-left: 160px;
+    border-radius: 10px;
+    background-color: black;
+    color: azure;
+}
+::placeholder {
+    color: grey;
+    font-size: 15px;
+    text-align: center;
+  }
