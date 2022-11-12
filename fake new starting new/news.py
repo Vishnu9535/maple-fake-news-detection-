@@ -10,3 +10,4 @@ def get_search_results(keywords):
     googlenews.search(search_words)
     result = googlenews.result()
     return result
+def 
