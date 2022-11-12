@@ -8,20 +8,16 @@ h1{
     font-size: 100px; 
     font-family: "paytone one";
 }
-input[type=text]{
-    width: 400px;
+input[type=url]{
+    width: 700px;
     height: 30px;
-    margin-left: 300px;
-    border-radius: 15px;
+    margin-left: 160px;
+    border-radius: 10px;
     background-color: black;
     color: azure;
 }
 ::placeholder {
     color: grey;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
   }
-img{
-    margin-top: 80px;
-    width:50px;
-}
