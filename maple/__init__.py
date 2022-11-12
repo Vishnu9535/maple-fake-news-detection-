@@ -2,6 +2,9 @@ from flask import Flask, request, redirect, jsonify, render_template, jsonify
 import requests as rq
 from bs4 import BeautifulSoup
 
+from core import validate
+
+
 app = Flask(__name__)
 
 
@@ -17,12 +20,6 @@ def query():
     result = validate(title)
 
     return jsonify({"URL": url, "valid": result})
-
-    # if request.method == "POST":
-    #     pass
-
-    # else:
-    #     return "GET not supported."
 
 
 @app.route("/")

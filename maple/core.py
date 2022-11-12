@@ -33,14 +33,14 @@ def paraphrase_wesite(result):
 
 
 def news_prediction(compare, text):
-    nlp = spacy.load("en_core_web_lg")
+    nlp = spacy.load("models/en_core_web_lg")
     # sentence=nlp('modi president of india')
     # sen2=nlp('modi is primeminister of india')
     # print(sentence.similarity(sen2))
     count = len(compare)
     if count > 10:
         count = 10
-    nlp = spacy.load("en_core_web_lg")
+    nlp = spacy.load("models/en_core_web_lg")
     sentence1 = nlp(text)
     for i in range(count):
         sentence2 = nlp(compare[i])

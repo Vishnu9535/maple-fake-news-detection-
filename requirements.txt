@@ -3,3 +3,4 @@ GoogleNews==1.6.5
 spacy==3.4.3
 spacy-legacy==3.0.10
 spacy-loggers==1.0.3
+beautifulsoup4==4.11.1
