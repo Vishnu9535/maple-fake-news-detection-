@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type=text/css href='{{ url_for("static", filename="styles/main.css") }}'/>
+    <link rel="stylesheet" type=text/css href='{{ url_for("static", filename="styles/main.css") }}' />
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 
     <p id="result"></p>
 
-    <script>
+    <script type="text/javascript">
         const body = document.getElementsByTagName("body")[0];
         var search = document.getElementById("url-search");
 
@@ -42,17 +42,15 @@
                     method: "POST",
                     body: dt
                 })
-                .then(resp => resp.json())
-                .then(rs => {
-                    if (rs.valid)
-                        body.style.backgroundColor = "lime";
-                    else
-                        body.style.backgroundColor = "firebrick";
-                })
+                    .then(resp => resp.json())
+                    .then(rs => {
+                        if (rs.valid)
+                            body.style.backgroundColor = "lime";
+                        else
+                            body.style.backgroundColor = "firebrick";
+                    })
             }
         }
     </script>
-
 </body>
 </html>
-

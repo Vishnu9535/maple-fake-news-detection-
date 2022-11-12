@@ -9,16 +9,14 @@ app = Flask(__name__)
 
 @app.route("/query/", methods=["POST", "GET"])
 def query():
-    url = request.form.get("URL", None).strip()
+    url = request.form.get("URL", "").strip()
 
     if not url:
         return jsonify({"type": "error"})
 
-    title = BeautifulSoup(rq.get(url).text, "html.parser").find('h1').text
+    title = BeautifulSoup(rq.get(url).text, "html.parser").find('h1')
 
-    result = validate(title)
-
-    return jsonify({"URL": url, "valid": bool(result)})
+    return jsonify({"type": "response", "URL": url, "valid": bool(validate(title.text))})
 
 
 @app.route("/")
