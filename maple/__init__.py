@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/query/", methods=["POST", "GET"])
 def query():
-    url = request.form.get("URL", None)
+    url = request.form.get("URL", None).strip()
 
     if not url:
         return jsonify({"type": "error"})
@@ -18,7 +18,7 @@ def query():
 
     result = validate(title)
 
-    return jsonify({"URL": url, "valid": result})
+    return jsonify({"URL": url, "valid": bool(result)})
 
 
 @app.route("/")
@@ -27,4 +27,4 @@ def main():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8012, debug=True)

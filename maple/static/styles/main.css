@@ -1,27 +1,61 @@
-/* @import url('https://fonts.googleapis.com/css?family=Paytone+One') */
+@import url('https://fonts.googleapis.com/css?family=Paytone+One');
+
+* {
+    --bg-color: #FFF;
+    --fg-color: #000;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
 
 div {
-    background-image: linear-gradient(red,yellow);
+    background-image: linear-gradient(red, yellow);
 }
 
-h1{
-    margin-top: 50px; 
-    margin-bottom: 30px;
+h1 {
+    /* margin-top: 50px; */
+    /* margin-bottom: 30px; */
+    margin: 40px 0;
     padding: 0;
-    text-align: center; 
-    font-size: 100px; 
+    text-align: center;
+    font-size: 10em;
     font-family: "paytone one";
 }
-input[type=url]{
-    width: 700px;
+
+input[type="url"] {
+    display: inline-block;
+
+    margin: 4% auto;
+    padding: 12px 8px;
+
+    font-family: "paytone one";
+
+    font-size: 1.4em;
+
+    width: 80%;
     height: 30px;
-    margin-left: 160px;
+
     border-radius: 10px;
-    background-color: black;
-    color: azure;
+
+    background-color: var(--fg-color);
+    color: var(--bg-color);
 }
+
 ::placeholder {
     color: grey;
-    font-size: 15px;
     text-align: center;
-  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    * {
+        --bg-color: #000;
+        --fg-color: #FFF;
+    }
+}

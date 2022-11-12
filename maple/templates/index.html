@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Maple</title>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
     <link rel="stylesheet" type=text/css href='{{ url_for("static", filename="styles/main.css") }}'/>
-    <h1 >Maple</h1>
 </head>
 
 <body>
-    <forms>
-       <input type="url"  name="homepage"  placeholder="URL...." >
-    </forms>
-    
+    <h1>Maple</h1>
+    <input id="url-search" type="url" name="homepage" placeholder="Give me an URL" />
+
+    <p id="result"></p>
+
+    <script>
+        const body = document.getElementsByTagName("body")[0];
+        var search = document.getElementById("url-search");
+
+        const up = /https?:\/\/.*\..*/i // url pattern
+
+        search.onkeypress = (e) => {
+            if (e.key == "Enter") {
+                var u = search.value;
+
+
+                if (!(up.test(u))) {
+                    body.style.backgroundColor = "blueviolet";
+                    search.value = "";
+                    search.setAttribute("placeholder", "That's not an URL, give me another")
+
+                    return
+                }
+
+                var dt = new FormData();
+                dt.append("URL", search.value)
+
+                fetch("{{ url_for('query') }}", {
+                    method: "POST",
+                    body: dt
+                })
+                .then(resp => resp.json())
+                .then(rs => {
+                    if (rs.valid)
+                        body.style.backgroundColor = "lime";
+                    else
+                        body.style.backgroundColor = "firebrick";
+                })
+            }
+        }
+    </script>
+
 </body>
 </html>
 
