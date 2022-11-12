@@ -5,17 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type=text/css href='/maple/templates/main.css'/>
+    <link rel="stylesheet" type=text/css href='{{ url_for("static", filename="styles/main.css") }}'/>
     
-    <h1 style="margin-top: 100px;text-align: center; font-size: 100px; font-family: paytone one;">Maple</h1>
+    <h1 >Maple</h1>
 </head>
 
 <body>
     <forms>
-        <div class="searchbar" >
-          <input type="text"  name="homepage" style="background-color: black; width:550px; height: 38px; margin-left:380px;border-radius: 15px;color: azure;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 20px;">
+          <input type="text"  name="homepage"  placeholder="Search...." >
     </forms>
+    
 </body>
 </html>
 
-<!---->
