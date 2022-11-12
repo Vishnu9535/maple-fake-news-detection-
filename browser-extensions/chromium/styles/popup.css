@@ -1,0 +1,43 @@
+
+
+@font-face {
+    font-family: "Paytone One";
+    src: url("../res/fonts/paytone-one.ttf");
+}
+
+
+* {
+    text-align: center;
+    font-family: "Paytone One", sans-serif;
+
+    --bg-color: white;
+    --fg-color: #0f0f0f;
+}
+
+body {
+    margin: 0;
+    padding: 2px 8px;
+
+    width: 280px;
+
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 10px;
+    padding: 0;
+
+    font-size: 3em;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    * {
+        --bg-color: #222;
+        --fg-color: white;
+    }
+}
