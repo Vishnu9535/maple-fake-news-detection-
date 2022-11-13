@@ -5,18 +5,22 @@
   "description": "News Validator",
   "version": "1.0",
 
+  "permissions": ["nativeMessaging", "tabs", "scripting"],
+
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup/popup.html"
   },
 
-  "permissions": [
-    "activeTab", "scripting"
-  ],
+  "host_permissions": ["http://localhost:*/*"],
 
   "content_scripts": [
     {
-      "matches": ["https://*.nytimes.com/*"],
-      "js": ["content-script.js"]
+      "js": ["scripts/script-a.js"],
+      "matches": [
+        "https://*.nytimes.com/*",
+        "https://*.indiatimes.com/*"
+      ]
     }
   ]
+
 }

@@ -32,7 +32,7 @@ input[type="url"] {
     display: inline-block;
 
     margin: 4% auto;
-    padding: 12px 8px;
+    padding: 16px 10px;
 
     font-family: "paytone one";
 
@@ -42,13 +42,15 @@ input[type="url"] {
     height: 30px;
 
     border-radius: 10px;
+    border: 0;
+    box-shadow: 10px 10px 5px #a5a5a5;
 
     background-color: var(--fg-color);
     color: var(--bg-color);
 }
 
 ::placeholder {
-    color: grey;
+    color: #ddd;
     text-align: center;
 }
 
